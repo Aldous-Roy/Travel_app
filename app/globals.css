@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   margin: 0;
@@ -8,16 +11,18 @@
 }
 
 body {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
 }
 
 @layer utilities {
+
+  /* ---------- BUTTONS ---------- */
   .btn_white { 
     @apply border-white bg-white px-8 py-3 text-green-50;
   }
 
   .btn_white_text  { 
-    @apply border-white bg-white px-8 py-3 text-gray-900;
+    @apply border-white bg-white px-8 py-3 text-gray-90;
   }
 
   .btn_green  { 
@@ -25,19 +30,20 @@ body {
   }
 
   .btn_dark_green { 
-    @apply bg-green-900 px-8 py-4 text-white transition-all hover:bg-black;
+    @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black;
   }
 
   .btn_dark_green_outline  { 
-    @apply border-gray-200 bg-green-900 px-8 py-5 text-white;
+    @apply border-gray-20 bg-green-90 px-8 py-5 text-white;
   }
   
+  /* ---------- LAYOUT ---------- */
   .max-container {
     @apply mx-auto max-w-[1440px];
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 2xl:px-0;
+    @apply px-6 lg:px-20 3xl:px-0;
   }
 
   .flexCenter { @apply flex items-center justify-center; }
@@ -45,6 +51,7 @@ body {
   .flexStart { @apply flex items-center justify-start; }
   .flexEnd { @apply flex items-center justify-end; }
 
+  /* ---------- TYPOGRAPHY ---------- */
   .regular-64 { @apply text-[64px] font-[400] leading-[120%]; }
   .regular-40 { @apply text-[40px] font-[400] leading-[120%]; }
   .regular-32 { @apply text-[32px] font-[400]; }
@@ -65,23 +72,27 @@ body {
   .bold-18 { @apply text-[18px] font-[700]; }
   .bold-16 { @apply text-[16px] font-[700]; }
 
+  /* ---------- HERO ---------- */
   .hero-map {
-    @apply absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60;
+    @apply absolute right-0 top-0 h-screen w-screen bg-pattern-2 bg-cover bg-center md:-right-28 xl:-top-60;
   }
 
+  /* ---------- CAMP ---------- */
   .camp-quote {
-    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 2xl:right-0;
+    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
   }
 
+  /* ---------- FEATURE ---------- */
   .feature-phone {
-    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex 2xl:left-20;
+    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
   }
 
+  /* ---------- GET APP ---------- */
   .get-app {
-    @apply mx-auto max-w-[1440px] relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-900 bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-[40px];
+    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
   }
 }
 
-/* Hide scrollbar */
+/* ---------- SCROLLBAR ---------- */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
