@@ -1,10 +1,17 @@
-import React from 'react'
-
+import Hero from './Hero'
+import Features from './Features'
+import Guide from './Guide'
+import Camp from './Camp'
+import GetApp from './GetApp' 
 const Home = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Hero />
+      <Features />
+      <Guide />
+      <Camp />
+      <GetApp />
+    </>
   )
 }
 
