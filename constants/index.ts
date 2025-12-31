@@ -43,7 +43,7 @@ export const FEATURES = [
     icon: '/location.svg',
     variant: 'orange',
     description:
-      'Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing',
+      'Lots of new locations every month, because we have a worldwide community of climbers who share their best experiences with climbing. Discover many new Indian locations.',
   },
 ];
 
@@ -62,14 +62,14 @@ export const FOOTER_LINKS = [
   },
   {
     title: 'Our Community',
-    links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+    links: ['Himalayan Trekking', 'Western Ghats Hiking', 'Hilink India'],
   },
 ];
 
 export const FOOTER_CONTACT_INFO = {
   title: 'Contact Us',
   links: [
-    { label: 'Admin Officer', value: '123-456-7890' },
+    { label: 'Admin Officer', value: '+91 1234567890' },
     { label: 'Email Officer', value: 'hilink@akinthil.com' },
   ],
 };
