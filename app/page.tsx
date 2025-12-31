@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Features />
-      <Guide />
       <Camp />
+      <Guide />
+      <Features />
       <GetApp />
     </>
   )
